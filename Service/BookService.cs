@@ -9,16 +9,21 @@ namespace Book.CRUD.Service
     {
         private readonly LoggingBroker loggingBroker;
         private readonly IStoreageBroker storeageBroker;
+        private object booksInfo;
+
         public BookService()
 
         {
             this.loggingBroker = new LoggingBroker();
             this.storeageBroker = new ArrayStoreageBroker();
         }
-        public Books GetBooks(int id);
-        //xato jinggalak qavus yuq
-        Books book = this.storeageBroker.RadBooks(id);
-    return book;
+        public Books GetBooks(int id)
+        {
+            Books book = this.storeageBroker.RadBooks(id);
+            return book;
+        }
+       
+     
             
 
 public Books ReadAllBook()

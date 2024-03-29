@@ -35,7 +35,7 @@ Books booksInfoLine { get; }
     public string Name { get; }
     public string Author { get; private set; }
 
-    public ArrayStoreageBroker()
+            public ArrayStoreageBroker()
     {
         BooksInfo[0] = new Books()
         {
